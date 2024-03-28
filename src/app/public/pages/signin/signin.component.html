@@ -1,0 +1,33 @@
+<mat-toolbar style="background-color: whitesmoke ">
+  <img src="https://i.imgur.com/GrOEn9y.png" width="70px">
+</mat-toolbar>
+<div class="structure">
+  <mat-card class="form" style="width: 1000px !important;">
+    <mat-card-content>
+      <div class="user-info">
+        <section>
+          <mat-label>Seleccione el tipo de usuario para ingresar</mat-label>
+          <div class="user-options">
+            <button mat-button id="btn" [class.active]="selectedUserType === 'keeper'" (click)="selectUserType('keeper')">Keeper</button>
+            <button mat-button id="btn" [class.active]="selectedUserType === 'traveller'" (click)="selectUserType('traveller')">Traveller</button>
+          </div>
+        </section>
+        <br>
+        <mat-label style="text-align: center; font-size: 30px"><b>Ingrese a su cuenta</b></mat-label>
+        <br><br>
+        <div>
+          <mat-label style="text-align: left; font-size: 15px">¿Todavía no te has registrado?</mat-label>
+          <button mat-button (click)="goToRegister();">Crear cuenta</button>
+        </div>
+        <br>
+        <mat-form-field>
+          <input matInput [(ngModel)]="correo_electronico" type="text" placeholder="Correo electrónico" class="input">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput [(ngModel)]="contrasena" type="text" placeholder="Contraseña" class="input">
+        </mat-form-field>
+        <button mat-button style="color: black; background-color: #7cb9e8" class="submit-button" (click)="login();">Ingresar</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

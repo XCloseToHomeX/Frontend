@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+.toolbar{
+  background-color: whitesmoke;
+  box-shadow: #14131B;
+}
+
+.structure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f4f4f4;
+  background-image: url("https://bloximages.newyork1.vip.townnews.com/elvocero.com/content/tncms/assets/v3/editorial/d/af/daf1019e-0c75-11ed-b70d-4f34a563e686/62df2e810188d.image.jpg?crop=1763%2C992%2C0%2C91&resize=1763%2C992&order=crop%2Cresize");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.form{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 500px;
+  justify-content: center;
+}
+
+.user-info{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  align-content: center;
+  max-width: 500px;
+}
+
+.user-options{
+  place-items: center;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  gap: 15px;
+}
+
+#btn{
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  flex-direction: column;
+  font-weight: bold;
+  color: black;
+  box-shadow: none;
+}
+
+#btn:hover{
+  background-color: transparent;
+}
+
+#btn.active{
+  color:#7cb9e8;
+}
+.input{
+  display: flex;
+  min-width: 300px;
+  max-width: 100%;
+  border: none;
+  text-align: start;
+  justify-content: center;
+}
+
+.form section{
+  justify-content: center;
+  text-align: center;
+}
+
+button{
+  border-radius: 15px;
+}
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  box-shadow: #14131B;
+}
+.menu-options{
+  display: flex;
+  gap: 10px;
+}
+.contenedor-principal{
+  display: flex;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  background-image: url("https://i.imgur.com/QYFonXY.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+<!-- Estilos generales -->
+html, body {
+  scroll-behavior: smooth;
+  background-color: rgb(1, 21, 48);
+}
+
+/* Estilos para la barra de navegación */
+.header {
+  display: flex;
+  padding: 20px 0px 20px 0px;
+  background-color: #011530;
+}
+
+.logo {
+  margin-left: 0;
+  width: 60px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.nav-item a:hover,
+.nav-item a.active {
+  color: #D6A049;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Estilos para la sección "Home" */
+#home {
+  height: 80vh;
+  background-image: url('https://i.imgur.com/IVIoOEF.png');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.try-now {
+  padding: 10px 20px;
+  background-color: #BE8E40;
+  border-radius: 20px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Estilos para la sección "Services" */
+#services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #011530;
+  border: 0;
+  color: #ffffff;
+  padding-bottom: 35px;
+}
+
+.title {
+  font-size: 5rem;
+  color: #D6A049;
+  padding: 20px;
+  margin-bottom: 6rem;
+}
+
+.services .card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.services .card {
+  width: 300px;
+  border-radius: 20px;
+  border: 0px;
+}
+
+.services .card img {
+  height: 200px;
+}
+
+.services .card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+}
+
+.read-more {
+  padding: 10px;
+  background-color: #D6A049;
+  border-radius: 20px;
+  border: none;
+  color: white;
+}
+
+/* Estilos para la sección "Plans" */
+#plans {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #011530;
+  border: 0;
+  color: #ffffff;
+  padding-bottom: 40px;
+}
+
+.plans .card-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 35px;
+}
+
+.plans .card {
+  width: 200px;
+  border-radius: 15px;
+  border: 0;
+  overflow: hidden;
+}
+
+.plans .custom {
+  width: 1000px;
+}
+
+.plans .stripe {
+  height: 20px;
+}
+
+.plans .standard .stripe {
+  background-color: #FFC286;
+}
+
+.plans .pro .stripe {
+  background-color: #EA9D51;
+}
+
+.plans .premium .stripe {
+  background-color: #F1C94E;
+}
+
+.plans .custom .stripe {
+  background-color: #D6A049;
+}
+
+.plans .card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.plans .custom .card-content {
+  padding: 20px;
+  display: flex;
+}
+
+.plans .custom .left-column {
+  text-align: center;
+  width: 75%;
+}
+
+.arrow {
+  font-size: 4em;
+  padding-top: 55px;
+}
+
+.plans .custom .right-column {
+  text-align: center;
+  width: 100%;
+}
+
+.subscribe {
+  border-radius: 15px;
+  padding: 10px;
+  border: none;
+  color: white;
+}
+
+
+.about-us {
+  background-color: rgb(1, 21, 48);
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-content h2 {
+  color: rgb(214, 160, 73); /* Color del título */
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.about-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.about-image {
+  width: 250px;
+  height: 250px;
+  background-image: url('https://i.imgur.com/afl9QkZ.png');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.about-text {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  flex: 1;
+}
+
+.about-text p {
+  color: black;
+  font-size: 1.6rem;
+}
+
+/* Estilos para la sección "Our Team" */
+.our-team {
+  background-color: #001530;
+  color: #fff;
+  text-align: center;
+}
+
+.team-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  flex: 1 1 calc(33.33% - 2rem);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.member-image img {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+}
+
+.member-details p {
+  font-size: 1.4rem;
+}
+
+/* Estilos para la sección "Contact" */
+.contact-content {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.contact-rectangle {
+  background-color: white;
+  border-radius: 10px;
+  border: 5px solid rgb(214, 160, 73);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 60%;
+  margin: 40px auto;
+}
+
+
+.contact-form {
+  flex: 1.5;
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 70%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid blue;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.send-button {
+  background-color: rgb(214, 160, 73);
+  width: 50%;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px auto;
+}
+
+.contact-social {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.follow-us {
+  font-size: 55px;
+  color: rgb(214, 160, 73);
+  margin: 40px auto;
+}
+
+.follow-us-small {
+  font-size: 40px;
+  color: rgb(214, 160, 73);
+}
+
+.contact-social {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-icon {
+  margin-top: 30px;
+}
+
+.social-icon a {
+  margin: 0 15px;
+}
+
+.social-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Estilos para el pie de página */
+.footer {
+  text-align: center;
+  margin: 20px 0;
+  color: rgb(214, 160, 73);
+}
+
+.footer-row {
+  margin: 25px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-item {
+  margin: 0 10px;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+.footer-item a {
+  color: rgb(214, 160, 73);
+  text-decoration: none;
+}

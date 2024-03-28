@@ -1,0 +1,64 @@
+<div style="height: 100vh;">
+    <mat-toolbar class="toolbar">
+      <img src="https://i.imgur.com/GrOEn9y.png" width="100px">
+      <div class="mat-spacer"></div>
+
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <a  class="buttonnav" mat-button >INICIO</a>
+        <a  class="buttonnav" mat-button (click)="goToFindHouse()">BUSCAR CASAS</a>
+        <a class="buttonnav" mat-button (click)="goToMessenger()">MENSAJERIA</a>
+        <a mat-button  (click)="goToProfile()"><img src="https://i.postimg.cc/Fs9Z3g3V/usuario-1.png" style="width: 3em;" ></a>
+      </div>
+    </mat-toolbar>
+
+
+
+    <mat-card class="contenedor-principal" >
+      <mat-card-content class="contenedor">
+
+        <br><br>
+        <mat-label  class="letter1"><b>Elije donde</b></mat-label>
+        <br><br>
+        <mat-label  class="letter2"><b>Hospedarte</b></mat-label>
+        <br><br>
+        <mat-label style="text-align: left">Encuentra le mejor lugar para ti</mat-label>
+        <mat-form-field >
+          <input matInput [(ngModel)]="title" type="text" placeholder="Ubicación" class="input" >
+        </mat-form-field> <button mat-button style="background-color: #14131B;color: white" (click)="goToFindHouse()"> BUSCAR UN HOSPEDAJE</button>
+
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card style="border-radius: 0">
+      <mat-card-content class="contenedor2">
+
+        <br><br>
+        <mat-label  style="font-size: 25px;text-align: center;color: #14131B"><b>El lugar perfecto para ti esta más cerca que nunca</b></mat-label>
+        <br><br>
+        <mat-label  style="font-size: 25px;text-align: center;color: #FF7A00"><b>Lugares disponibles</b></mat-label>
+        <br><br>
+
+        <mat-card>
+          <div class="card-container">
+            <div *ngFor="let viaje of viajes" class="viaje-card-container">
+              <mat-card class="viaje-card viaje-card-background">
+                <div class="card-content">
+                  <img mat-card-image [src]="viaje.photoUrl" alt="{{ viaje.title }}" class="viaje-image">
+                  <mat-card-content>
+                    <h2 class="viaje-title">{{ viaje.title }}</h2>
+                    <p class="viaje-description">{{ viaje.description }}</p>
+                  </mat-card-content>
+                  <mat-card-footer class="viaje-footer">
+                    <mat-icon class="viaje-rating-icon">star</mat-icon>
+                    <span class="viaje-rating">{{ viaje.rating }}</span>
+                  </mat-card-footer>
+                </div>
+              </mat-card>
+            </div>
+          </div>
+        </mat-card>
+        <br><br>
+      </mat-card-content>
+    </mat-card>
+</div>

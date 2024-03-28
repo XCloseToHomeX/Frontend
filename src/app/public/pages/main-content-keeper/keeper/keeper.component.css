@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+.toolbar{
+  background-color: whitesmoke;
+  box-shadow: #14131B;
+}
+
+
+.card-text {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.card-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+
+.card-text a:hover {
+  text-decoration: underline;
+}
+
+
+.contenedor-principal{
+  display: flex;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  background-image: url("https://i.imgur.com/OYCtG3j.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0;
+}
+.mat-spacer{
+  flex: 1.1 auto;
+
+  box-shadow: #14131B;
+}
+.buttonnav{
+  color: #14131B;
+  margin: 10px;
+  list-style-type: none;
+}
+.buttonnav:focus{
+  color: #FF7A00;
+}
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+
+
+.contenedor{
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: whitesmoke;
+  opacity: 100%;
+  border-radius: 30px;
+
+  box-shadow:#14131B ;
+  justify-content: center;
+
+}
+.contenedor2{
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  opacity: 100%;
+  border-radius: 30px;
+
+  box-shadow:#14131B ;
+  justify-content: center;
+
+}
+.section-button{
+
+  place-items: center;
+  display: flex;
+  margin: auto;
+
+  justify-content: center;
+}
+
+#btnn{
+
+  background-color: transparent;
+  border: none;
+
+  padding: 0;
+  flex-direction: column;
+  font-weight: bold;
+  color: black;
+  font-family: 'Poppins',sans-serif;
+  box-shadow: none;
+}
+
+.input{
+  display: flex;
+
+  border: none;
+  text-align: start;
+  justify-content: center;
+}
+.letter1{
+  text-align: center;
+  font-size: 40px;
+  display: flex;
+  flex-flow: column;
+  color: #FF7A00;
+
+  font-family: 'Poppins',sans-serif;
+}
+.letter2{
+  text-align: center;
+  font-size: 40px;
+  flex-flow: column;
+  display: flex;
+  color: #14131B;
+  font-family: 'Poppins',sans-serif;
+}
+
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.viaje-card {
+  max-width: 300px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.viaje-image {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.viaje-title {
+  margin: 10px 0;
+}
+
+
+.viaje-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.viaje-image {
+  width: 150px;  /* Ajusta este valor según lo desees */
+  height: auto;
+  border-radius: 5px;
+}
+.viaje-rating-icon {
+  font-size: 24px;
+  color: #fdd835; /* Puedes cambiar este color según tus preferencias */
+}
+.viaje-card-background {
+  background-color: orange;
+}
+
+
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.viaje-card-container {
+  margin-right: 10px; /* Ajusta según tus necesidades */
+}
+
+.viaje-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.viaje-image {
+  width: 150px;  /* Ajusta según tus necesidades */
+  height: auto;
+}
+
+.viaje-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viaje-rating-icon {
+  margin-right: 5px;  /* Ajusta según tus necesidades */
+}
+
+.viaje-card-background {
+  background-color: orange;
+}
+

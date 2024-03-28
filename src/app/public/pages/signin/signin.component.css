@@ -1,0 +1,72 @@
+.structure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f4f4f4;
+  background-image: url("https://bloximages.newyork1.vip.townnews.com/elvocero.com/content/tncms/assets/v3/editorial/d/af/daf1019e-0c75-11ed-b70d-4f34a563e686/62df2e810188d.image.jpg?crop=1763%2C992%2C0%2C91&resize=1763%2C992&order=crop%2Cresize");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.form{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  max-width: 500px;
+  justify-content: center;
+}
+
+.user-info{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+  align-content: center;
+  max-width: 500px;
+}
+
+.user-options{
+  place-items: center;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  gap: 15px;
+}
+
+#btn{
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  flex-direction: column;
+  font-weight: bold;
+  color: black;
+  box-shadow: none;
+}
+
+#btn:hover{
+  background-color: transparent;
+}
+
+#btn.active{
+  color:#7cb9e8;
+}
+.input{
+  display: flex;
+  min-width: 300px;
+  max-width: 100%;
+  border: none;
+  text-align: start;
+  justify-content: center;
+}
+
+.form section{
+  justify-content: center;
+  text-align: center;
+}
+
+button{
+  border-radius: 15px;
+}

@@ -1,0 +1,185 @@
+<mat-toolbar class="toolbar">
+  <img src="https://i.imgur.com/GrOEn9y.png" width="60px">
+  <div class="menu-options">
+    <a mat-button  [routerLink]="'/sign-in'">Sign-In</a>
+    <a mat-button  [routerLink]="'/register-keeper'">Sign-Up</a>
+
+    <mat-divider [vertical] ="true" [inset]="true"></mat-divider>
+
+  </div>
+</mat-toolbar>
+
+
+<router-outlet></router-outlet>
+<section class="home" id="home">
+  <a mat-button (click)="goToLogin()" [ngClass]="{'try-now': true}">Try it now</a>
+</section>
+
+<section class="about-us" id="about-us">
+  <div class="about-content">
+    <h1 class="title">About Us</h1>
+    <div class="about-details">
+      <div class="about-image"></div>
+      <div class="about-text">
+        <p>HousseKeeper es una aplicación de "Cuidado de casas", donde habrá un intercambio con beneficio mutuo: una persona se hace responsable de cuidar una casa mientras sus propietarios están de viaje. Lo que tendrás que hacer dependerá del propietario de la casa. Algunos te pedirán que sólo cuides de los animales, otros que cuides de la casa (limpies y vigiles), también pueden pedirte que te hagas cargo de los gastos que generes de luz y agua. Es un trabajo voluntario y ofreces tus servicios a cambio de una vivienda, y todos los gastos personales correrán por cuenta de cada uno.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <h1 class="title">Services</h1>
+  <div class="card-container">
+    <div class="card">
+      <img src="https://i.imgur.com/aKj3Zqx.png" alt="Imagen 1">
+      <div class="card-content">
+        <h2>Service Keeper</h2>
+        <p>Enter information you want to share with your guests about the food hall, as well as table reservation options and/or room service with personalized dishes</p>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://i.imgur.com/MwHuMZc.png" alt="Imagen 2">
+      <div class="card-content">
+        <h2>Service Traveler</h2>
+        <p>Connect the room maintenance service with your guests to simplify their demands</p>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="plans" id="plans">
+  <h1 class="title">Plans</h1>
+  <div class="card-container">
+    <div class="card standard">
+      <div class="stripe"></div>
+      <div class="card-content">
+        <h2>Standard</h2>
+        <p>30 rooms</p>
+        <p>S/. 150 mensual</p>
+        <button class="subscribe" style="background-color: #FFC286;">Subscribe</button>
+      </div>
+    </div>
+    <div class="card pro">
+      <div class="stripe"></div>
+      <div class="card-content">
+        <h2>Pro</h2>
+        <p>50 rooms</p>
+        <p>S/. 250 mensual</p>
+        <button class="subscribe" style="background-color: #EA9D51;">Subscribe</button>
+      </div>
+    </div>
+    <div class="card premium">
+      <div class="stripe"></div>
+      <div class="card-content">
+        <h2>Premium</h2>
+        <p>Unlimited</p>
+        <p>S/. 400 mensual</p>
+        <button class="subscribe" style="background-color: #F1C94E;">Subscribe</button>
+      </div>
+    </div>
+  </div>
+  <div class="card custom">
+    <div class="stripe"></div>
+    <div class="card-content">
+      <div class="left-column">
+        <h2>Custom plan</h2>
+        <p>How many rooms do you have?</p>
+        <h3 class="rooms">15 rooms</h3>
+      </div>
+      <div class="arrow">&#8594;</div>
+      <div class="right-column">
+        <h2>Prices from S/. 6.50 per room</h2>
+        <p>Plans to satisfy each stage of your hotel</p>
+        <h3 class="total">S/. 97.50</h3>
+        <button class="subscribe" style="background-color: #D6A049;">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="our-team" id="our-team">
+  <div class="team-content">
+    <h1 class="title">Our Team</h1>
+    <div class="team-row">
+      <div class="team-member">
+        <div class="member-image">
+          <img src="https://i.imgur.com/jqenRlp.png" alt="Alonso Fernando Robles Astuñaupa">
+        </div>
+        <div class="member-details">
+          <p><strong>Alonso Fernando<br> Robles Astuñaupa</strong></p>
+          <p>Software Engineering Student</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="member-image">
+          <img src="https://i.imgur.com/goVK0n8.png" alt="Christian Jose Zeta Valenzuela">
+        </div>
+        <div class="member-details">
+          <p><strong>Christian Jose<br> Zeta Valenzuela</strong></p>
+          <p>Software Engineering Student</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="member-image">
+          <img src="https://i.imgur.com/tGpaH1A.png" alt="Leonardo Walt Patrocinio Escalante">
+        </div>
+        <div class="member-details">
+          <p><strong>Leonardo Walt<br> Patrocinio Escalante</strong></p>
+          <p>Software Engineering Student</p>
+        </div>
+      </div>
+    </div>
+    <div class="team-row">
+      <div class="team-member center-member">
+        <div class="member-image">
+          <img src="https://i.imgur.com/ZbiWN7N.png" alt="Leonardo Jesús Ferreyra Canaval">
+        </div>
+        <div class="member-details">
+          <p><strong>Leonardo Jesús<br>Ferreyra Canaval</strong></p>
+          <p>Software Engineering Student</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-content">
+    <h1 class="title">Contact</h1>
+    <div class="contact-rectangle">
+      <div class="contact-form">
+        <input type="text" placeholder="Name" style="width: 80%; margin: 10px auto;">
+        <input type="email" placeholder="Email" style="width: 80%; margin: 10px auto;">
+        <textarea placeholder="Message" style="width: 80%; margin: 10px auto;"></textarea>
+        <button class="send-button" style="width: 70%; margin: 10px auto;">Send</button>
+      </div>
+      <div class="contact-social">
+        <div class="follow-us" style="color: rgb(214, 160, 73);">Follow us</div>
+        <div class="follow-us-small" style="color: rgb(214, 160, 73); ">in</div>
+        <div class="social-icon">
+          <a href="#contact"><img src="https://i.imgur.com/Gvnum7B.png" alt="Facebook"></a>
+          <a href="#contact"><img src="https://i.imgur.com/GKcSCPU.png" alt="LinkedIn"></a>
+          <a href="#contact"><img src="https://i.imgur.com/Y2GoZQW.png" alt="Twitter"></a>
+          <a href="#contact"><img src="https://i.imgur.com/ZMMMTo2.png" alt="Google+"></a>
+          <a href="#contact"><img src="https://i.imgur.com/bzQNl3V.png" alt="Instagram"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-row">
+      <div class="footer-item">Consent to data processing</div>
+      <div class="footer-item"><a href="#contact">Support</a></div>
+      <div class="footer-item">Privacy Policy</div>
+    </div>
+    <div class="footer-row">
+      <div class="footer-item">&copy;<a href="#"> HousseKeeper 2023 All Rights Reserved</a></div>
+    </div>
+  </div>
+</footer>
