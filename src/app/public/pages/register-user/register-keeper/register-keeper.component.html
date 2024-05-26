@@ -1,12 +1,12 @@
-<mat-toolbar style="background-color: whitesmoke ">
-  <img src="../../../../assets/homeguardians_logo.png" width="60px">
+<mat-toolbar style="background-color: #023047 ; height: 11%" >
+  <a style="margin-left: 3%; cursor: pointer" ref="#"><img src="../../../../assets/homeguardians_logo2.png" width="85px"></a>
 </mat-toolbar>
 <div class="structure">
   <mat-card class="form" style="width: 1000px !important;" >
     <mat-card-content>
       <div class="user-info">
         <section>
-          <mat-label>Seleccione el tipo de usuario a crear</mat-label>
+          <mat-label style="font-size: 17px">Seleccione el tipo de usuario a crear</mat-label>
           <div class="user-options">
             <button mat-button id="btn"class="active">Keeper</button>
             <button mat-button id="btn" (click)="goToRegisterTraveller();">Traveller</button>
@@ -15,7 +15,7 @@
         <br>
         <mat-label style="text-align: center; font-size: 30px"><b>Registrate</b></mat-label>
         <br><br>
-        <mat-label style="text-align: left; font-size: 15px">Ingrese la información solicitada</mat-label>
+        <mat-label style="text-align: left; font-size: 15px; color: white">Ingrese la información solicitada</mat-label>
         <br>
         <mat-label style="text-align: left">Nombres:</mat-label>
         <mat-form-field>
@@ -51,7 +51,7 @@
         <mat-form-field>
           <input matInput [(ngModel)]="repeat_password" type="password" placeholder="Contraseña" class="input">
         </mat-form-field>
-        <button mat-button style="color: black; background-color: #7cb9e8" class="submit-button" (click)="goToLogin();">Finalizar registro de Keeper</button>
+        <button mat-button style="color: #011530; background-color: #ffb703;  font-size: 18px;font-weight: bold;" class="submit-button" (click)="goToLogin();">Finalizar registro de Keeper</button>
       </div>
     </mat-card-content>
   </mat-card>

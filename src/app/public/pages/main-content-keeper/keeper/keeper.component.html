@@ -1,6 +1,6 @@
 <div style="height: 100vh;">
-    <mat-toolbar class="toolbar">
-      <img src="../../../../assets/homeguardians_logo.png" width="60px">
+    <mat-toolbar style="background-color: #023047 ; height: 11%"  class="toolbar">
+      <a ref="/login"><img src="../../../../../assets/homeguardians_logo2.png" style="cursor: pointer;margin-left: 19%; margin-top: 12%; padding: 14px" width="80px"></a>
       <div class="mat-spacer"></div>
 
       <span class="example-spacer"></span>
@@ -12,20 +12,17 @@
       </div>
     </mat-toolbar>
 
-
-
     <mat-card class="contenedor-principal" >
-      <mat-card-content class="contenedor">
-
+      <mat-card-content style="padding: 4rem 4rem" class="contenedor">
         <br><br>
-        <mat-label  class="letter1"><b>Elije donde</b></mat-label>
+        <mat-label  class="letter1"><b>Buscar casas</b></mat-label>
         <br><br>
-        <mat-label  class="letter2"><b>Hospedarte</b></mat-label>
+        <mat-label  class="letter2"><b>Disponibles</b></mat-label>
         <br><br>
         <mat-label style="text-align: left">Encuentra le mejor lugar para ti</mat-label>
         <mat-form-field >
           <input matInput [(ngModel)]="title" type="text" placeholder="Ubicación" class="input" >
-        </mat-form-field> <button mat-button style="background-color: #14131B;color: white" (click)="goToFindHouse()"> BUSCAR UN HOSPEDAJE</button>
+        </mat-form-field> <button mat-button id="btnsearch" style="background-color: #14131B;color: white" (click)="goToFindHouse()"> BUSCAR CASA</button>
 
       </mat-card-content>
     </mat-card>
