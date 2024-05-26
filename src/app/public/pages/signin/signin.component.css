@@ -16,9 +16,13 @@
   flex-direction: column;
   margin: auto;
   max-width: 500px;
+  border-radius: 15px;
   justify-content: center;
+  background-color: #011530;
+  color: #ffb703;
 }
-
+/*color: #ffb703;
+  color: #023047;*/
 .user-info{
   display: flex;
   flex-direction: column;
@@ -31,27 +35,35 @@
 .user-options{
   place-items: center;
   display: flex;
-  margin: auto;
   justify-content: center;
-  gap: 15px;
+  gap: 25px;
+  margin: 10px 0;
 }
 
 #btn{
   background-color: transparent;
   border: none;
-  padding: 0;
+  padding: 1px 5px;
   flex-direction: column;
-  font-weight: bold;
-  color: black;
+  color: #ffffff;
+  font-size: 18px;
   box-shadow: none;
 }
 
 #btn:hover{
-  background-color: transparent;
+  background-color: #ffb703;
+  color: black;
+  font-weight: bold;
+}
+
+.crear:hover{
+ color:  #ffb703;
 }
 
 #btn.active{
-  color:#7cb9e8;
+  background-color: #ffb703;
+  color: black;
+  font-weight: bold;
 }
 .input{
   display: flex;
@@ -69,4 +81,9 @@
 
 button{
   border-radius: 15px;
+}
+
+.submit-button:hover{
+  background-color: #efba35;
+
 }
