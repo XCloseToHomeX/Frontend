@@ -30,6 +30,7 @@ const routes: Routes = [
   { path: 'sign-in', component : SigninComponent  },
   {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: '**', component:PageNotFoundComponent},
+  //{path: }
 
 ]
 

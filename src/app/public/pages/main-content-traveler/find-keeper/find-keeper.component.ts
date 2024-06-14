@@ -95,21 +95,14 @@ export class FindKeeperComponent implements OnInit{
     const currentUser = this.getCurrentUserName();
 
     if (currentUser) {
-      const mensaje = {
-        nombre: currentUser,
-        description: "Quiero solicitar tus servicios, pongámonos en contacto",
-        photoFace: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png"
+      const messajeSo = {
+        sender: currentUser,
+        content: "Quiero solicitar tus servicios, pongámonos en contacto",
+        //photoFace: "https://cdn-icons-png.flaticon.com/512/3135/3135768.png"
       };
 
       // Llama al servicio para guardar el mensaje
-      this.mensajeriaService.guardarMensaje(mensaje).subscribe(
-        (response) => {
-          console.log('Mensaje guardado con éxito', response);
-        },
-        (error) => {
-          console.error('Error al guardar el mensaje', error);
-        }
-      );
+      this.mensajeriaService.sendMessage("Solicitudes", messajeSo);
     }
   }
 }
