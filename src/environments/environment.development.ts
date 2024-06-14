@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  serverBasePath: 'https://homeguardians.zeabur.app/api/v1'
+  serverBasePath: 'http://localhost:8080/api/v1'
 }

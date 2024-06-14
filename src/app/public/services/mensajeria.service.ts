@@ -20,7 +20,7 @@ export class MensajeriaService {
   }
 
   initConnectionSocket(){
-    const url = 'http://localhost:8081/chat-socket';
+    const url = '//localhost:8080/chat-socket';
     this.stompClient = new Client({
       webSocketFactory: ()=> new SockJS(url),
       debug: (str) => console.log(str),
