@@ -1,5 +1,5 @@
-<mat-toolbar class="toolbar">
-  <img src="../../../../assets/homeguardians_logo.png" width="60px">
+<mat-toolbar style="background-color: #023047 ; height: 11%" class="toolbar">
+  <a ref="/login"><img src="../../../../../assets/homeguardians_logo2.png" style="cursor: pointer;margin-left: 19%; margin-top: 12%; padding: 14px" width="80px"></a>
   <div class="menu-options">
     <a class="button-menu" mat-button (click)="goToKeeper()">INICIO</a>
     <a class="button-menu" mat-button>BUSCAR CASAS</a>
@@ -8,10 +8,10 @@
   </div>
 </mat-toolbar>
 
-<div class="form-filter">
+<div style="margin-top: 5%" class="form-filter">
   <mat-card class="filter">
     <mat-card-header>
-      <mat-card-title class="title">ENCUENTRA LA CASA DE TUS SUEÑOS</mat-card-title>
+      <mat-card-title class="title">ENCUENTRA UNA CASA </mat-card-title>
     </mat-card-header>
     <mat-card-content class="subtitle">
       <div class="form-fields">
@@ -59,8 +59,8 @@
       </div>
       <br>
       <div class="form-buttons">
-        <button mat-button style="color: black; background-color: #7cb9e8" class="button" (click)="onFilter()">Filtrar</button>
-        <button mat-button style="color: black; background-color: #7cb9e8" class="button" (click)="toReset()">Cancelar</button>
+        <button mat-button style="color: black; background-color: #ffb703" class="button" (click)="onFilter()">Filtrar</button>
+        <button mat-button style="color: black; background-color:#ffb703" class="button" (click)="toReset()">Cancelar</button>
       </div>
     </mat-card-content>
   </mat-card>

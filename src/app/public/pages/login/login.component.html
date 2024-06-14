@@ -1,8 +1,13 @@
-<mat-toolbar class="toolbar">
-  <img src="../../../../assets/homeguardians_logo.png" width="60px">
+<mat-toolbar style="background-color: #023047 ; height: 11%" class="toolbar"> <!-- #5c55e1 #00BFFF-->
+  <a ref="/login"><img src="../../../../assets/homeguardians_logo2.png" style="cursor: pointer;margin-left: 19%; margin-top: 12%; padding: 14px" width="80px"></a>
   <div class="menu-options">
-    <a mat-button  [routerLink]="'/sign-in'">Sign-In</a>
-    <a mat-button  [routerLink]="'/register-keeper'">Sign-Up</a>
+    <a mat-button href="#about-us">ABOUT</a>
+    <a mat-button href="#services">SERVICES</a>
+    <a mat-button href="#plans">PLANS</a>
+    <a mat-button href="#team">TEAM</a>
+    <a mat-button href="#contact"> CONTACT</a>
+    <a mat-button id="bot-sig" [routerLink]="'/sign-in'">SIGN-IN</a>
+    <a mat-button id="bot-sig" [routerLink]="'/register-keeper'">SIGN-UP</a>
 
     <mat-divider [vertical] ="true" [inset]="true"></mat-divider>
 
@@ -12,24 +17,46 @@
 
 <router-outlet></router-outlet>
 <section class="home" id="home">
-  <a mat-button (click)="goToLogin()" [ngClass]="{'try-now': true}">Try it now</a>
+  <a mat-button (click)="goToLogin()" [ngClass]="{'try-now': true}"><strong>TRY IT NOW</strong></a>
 </section>
 
-<section class="about-us" id="about-us">
+<section style="background-color: #011530;" class="about-us" id="about-us">
   <div class="about-content">
     <h1 class="title">About Us</h1>
     <div class="about-details">
-      <div class="about-image"></div>
       <div class="about-text">
         <p>HousseKeeper es una aplicación de "Cuidado de casas", donde habrá un intercambio con beneficio mutuo: una persona se hace responsable de cuidar una casa mientras sus propietarios están de viaje. Lo que tendrás que hacer dependerá del propietario de la casa. Algunos te pedirán que sólo cuides de los animales, otros que cuides de la casa (limpies y vigiles), también pueden pedirte que te hagas cargo de los gastos que generes de luz y agua. Es un trabajo voluntario y ofreces tus servicios a cambio de una vivienda, y todos los gastos personales correrán por cuenta de cada uno.</p>
       </div>
     </div>
   </div>
+  <div class="about-image"><div  id="home-init" class="carousel-container">
+    <div class="left">
+      <button mat-icon-button class="prev" (click)="prevSlide()">
+        <mat-icon><strong>keyboard_arrow_left</strong></mat-icon>
+      </button>
+    </div>
+    <div *ngFor="let slide of visibleSlides; let i = index" class="slide">
+      <mat-card class="card">
+        <div class="image-container">
+          <img [src]="slide.imageUrl" [alt]="slide.title">
+        </div>
+      </mat-card>
+    </div>
+    <div class="right">
+      <button mat-icon-button class="next" (click)="nextSlide()">
+        <mat-icon><strong>keyboard_arrow_right</strong></mat-icon>
+      </button>
+    </div>
+    <div class="dots">
+          <span *ngFor="let slide of slides.slice(0, 4); let i = index" class="dot" [class.active]="currentSlide === i"
+                (click)="goToSlide(i)"></span>
+    </div>
+  </div></div>
 </section>
 
 <section class="services" id="services">
-  <h1 class="title">Services</h1>
-  <div class="card-container">
+  <h1 style="margin-top: 6%" class="title">Services</h1>
+  <div style="margin-top: -3%; " class="card-container">
     <div class="card">
       <img src="https://i.imgur.com/aKj3Zqx.png" alt="Imagen 1">
       <div class="card-content">
@@ -42,6 +69,22 @@
       <img src="https://i.imgur.com/MwHuMZc.png" alt="Imagen 2">
       <div class="card-content">
         <h2>Service Traveler</h2>
+        <p> Connect the room maintenance service with your guests to simplify their demands and guarantee profits and good service from the caretakers</p>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/travel-service.jpeg" alt="Imagen 1" width="100%">
+      <div class="card-content">
+        <h2>Service Keeper</h2>
+        <p>Enter information you want to share with your guests about the food hall, as well as table reservation options and/or room service with personalized dishes</p>
+        <button class="read-more">Read More</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="assets/keeper-service.jpg" alt="Imagen 2" width="100%">
+      <div class="card-content">
+        <h2>Service Traveler</h2>
         <p>Connect the room maintenance service with your guests to simplify their demands</p>
         <button class="read-more">Read More</button>
       </div>
@@ -50,56 +93,51 @@
 </section>
 
 <section class="plans" id="plans">
-  <h1 class="title">Plans</h1>
-  <div class="card-container">
-    <div class="card standard">
+  <h1 class="title">Elige un Plan</h1>
+  <div class="card-containers">
+    <div class="cards standard">
       <div class="stripe"></div>
-      <div class="card-content">
+      <div class="cards-content">
         <h2>Standard</h2>
-        <p>30 rooms</p>
-        <p>S/. 150 month</p>
-        <button class="subscribe" style="background-color: #FFC286;">Subscribe</button>
+        <p>Manage up to 30 rooms</p>
+        <p><strong style="font-size: 28px;line-height: 1.8;">S/. 150</strong> per month</p>
+        <button class="subscribe">Subscribe</button>
       </div>
     </div>
-    <div class="card pro">
+    <div class="cards pro">
       <div class="stripe"></div>
       <div class="card-content">
         <h2>Pro</h2>
-        <p>50 rooms</p>
-        <p>S/. 250 month</p>
-        <button class="subscribe" style="background-color: #EA9D51;">Subscribe</button>
+        <p>Manage up to 50 rooms</p>
+        <p><strong style="font-size: 28px;line-height: 1.8;">S/. 250</strong> per month</p>
+        <button class="subscribe">Subscribe</button>
       </div>
     </div>
-    <div class="card premium">
+    <div class="cards premium">
       <div class="stripe"></div>
       <div class="card-content">
         <h2>Premium</h2>
-        <p>Unlimited</p>
-        <p>S/. 400 month</p>
-        <button class="subscribe" style="background-color: #F1C94E;">Subscribe</button>
+        <p>Manage unlimited rooms</p>
+        <p><strong style="font-size: 28px;line-height: 1.8;">S/. 400</strong> per month</p>
+        <button class="subscribe">Subscribe</button>
       </div>
     </div>
-  </div>
-  <div class="card custom">
-    <div class="stripe"></div>
-    <div class="card-content">
-      <div class="left-column">
-        <h2>Custom plan</h2>
-        <p>How many rooms do you have?</p>
+    <div class="cards custom">
+      <div class="stripe"></div>
+      <div class="card-content">
+        <h2>Custom Plan</h2>
+        <p>Manage a custom number of rooms</p>
         <h3 class="rooms">15 rooms</h3>
-      </div>
-      <div class="arrow">&#8594;</div>
-      <div class="right-column">
-        <h2>Prices from S/. 6.50 per room</h2>
-        <p>Plans to satisfy each stage of your hotel</p>
+        <p>Prices start from S/. 6.50 per room</p>
         <h3 class="total">S/. 97.50</h3>
-        <button class="subscribe" style="background-color: #D6A049;">Subscribe</button>
+        <button class="subscribe">Subscribe</button>
       </div>
     </div>
   </div>
 </section>
 
-<section class="our-team" id="our-team">
+
+<section class="our-team" id="team">
         <div class="team-content">
             <h1 class="title">Our Team</h1>
             <div class="team-row">
@@ -161,9 +199,31 @@
         <textarea placeholder="Message" style="width: 80%; margin: 10px auto;"></textarea>
         <button class="send-button" style="width: 70%; margin: 10px auto;">Send</button>
       </div>
-      <div class="contact-social">
-        <div class="follow-us" style="color: rgb(214, 160, 73);">Follow us</div>
-        <div class="follow-us-small" style="color: rgb(214, 160, 73); ">in</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-row">
+      <div class="footer-column">
+        <h3>About Us</h3>
+        <p>Learn more about our mission and values.</p>
+        <p><a href="#about">Our Story</a></p>
+        <p><a href="#team">Meet the Team</a></p>
+        <p><a href="#careers">Careers</a></p>
+      </div>
+      <div class="footer-column">
+        <h3>Support</h3>
+        <p><a href="#contact">Contact Us</a></p>
+        <p><a href="#faq">FAQ</a></p>
+        <p><a href="#terms">Terms of Service</a></p>
+        <p><a href="#privacy">Privacy Policy</a></p>
+      </div>
+      <div class="footer-column">
+        <h3>Stay Connected</h3>
+        <p>Follow us on social media and stay updated with our latest news.</p>
         <div class="social-icon">
           <a href="#contact"><img src="https://i.imgur.com/Gvnum7B.png" alt="Facebook"></a>
           <a href="#contact"><img src="https://i.imgur.com/GKcSCPU.png" alt="LinkedIn"></a>
@@ -173,19 +233,8 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="footer-content">
     <div class="footer-row">
-      <div class="footer-item">Consent to data processing</div>
-      <div class="footer-item"><a href="#contact">Support</a></div>
-      <div class="footer-item">Privacy Policy</div>
-    </div>
-    <div class="footer-row">
-      <div class="footer-item">&copy;<a href="#"> HousseKeeper 2023 All Rights Reserved</a></div>
+      <div style="font-size: 20px; color: white" class="footer-item1">&copy;<a href="#" style="color: white; text-decoration: none"> HousseKeeper 2023 All Rights Reserved</a></div>
     </div>
   </div>
 </footer>

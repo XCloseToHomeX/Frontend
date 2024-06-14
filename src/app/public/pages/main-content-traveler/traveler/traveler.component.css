@@ -4,6 +4,20 @@
   box-shadow: #14131B;
 }
 
+.toolbar a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  color: #ffb703;
+}
+
+.toolbar a:hover {
+  background-color: #ffb703;
+  color: #023047;
+  border-radius: 13px;
+
+}
 
 .card-text {
   font-size: 18px;

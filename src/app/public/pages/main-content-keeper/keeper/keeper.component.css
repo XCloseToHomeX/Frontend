@@ -4,6 +4,20 @@
   box-shadow: #14131B;
 }
 
+.toolbar a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  color: #ffb703;
+}
+
+.toolbar a:hover {
+  background-color: #ffb703;
+  color: #023047;
+  border-radius: 13px;
+
+}
 
 .card-text {
   font-size: 18px;
@@ -27,12 +41,14 @@
 
 .contenedor-principal{
   display: flex;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   padding-top: 30px;
+  padding: 7rem 5rem;
   background-image: url("https://i.imgur.com/OYCtG3j.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0;
+
 }
 .mat-spacer{
   flex: 1.1 auto;
@@ -55,17 +71,14 @@
   flex: 1 1 auto;
 }
 
-
-
 .contenedor{
   padding: 60px;
   display: flex;
   flex-direction: column;
   margin: auto;
-  background-color: whitesmoke;
+  background-color: rgba(245, 245, 245, 0.69);
   opacity: 100%;
   border-radius: 30px;
-
   box-shadow:#14131B ;
   justify-content: center;
 
@@ -113,17 +126,18 @@
 }
 .letter1{
   text-align: center;
-  font-size: 40px;
+  font-size: 27px;
   display: flex;
   flex-flow: column;
   color: #FF7A00;
-
+  margin-top: -18%;
   font-family: 'Poppins',sans-serif;
 }
 .letter2{
   text-align: center;
   font-size: 40px;
   flex-flow: column;
+  margin-top: -11%;
   display: flex;
   color: #14131B;
   font-family: 'Poppins',sans-serif;
@@ -173,6 +187,9 @@
   background-color: orange;
 }
 
+mat-form-field button:hover{
+  background-color:#ffb703;
+}
 
 .card-container {
   display: flex;
