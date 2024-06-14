@@ -9,6 +9,6 @@ import {HttpClient} from "@angular/common/http";
 export class KeeperRequestService extends BaseService<keeperRequest>{
   constructor(http:HttpClient) {
     super(http);
-    this.resourceEndpoint = '/keeperRequest';
+    this.resourceEndpoint = '/keepers';
   }
 }

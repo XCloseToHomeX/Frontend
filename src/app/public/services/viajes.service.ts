@@ -10,6 +10,6 @@ export class ViajesService extends BaseService<Viajes>{
 
   constructor(http:HttpClient) {
     super(http);
-    this.resourceEndpoint = '/viajes';
+    this.resourceEndpoint = '/houses';
   }
 }
