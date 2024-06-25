@@ -32,18 +32,23 @@ export class MessengerKeeperComponent implements OnInit{
       this.mensajeriaservice.sendMessage("ChatGeneral", chatMessaje);
       this.messageInput = "";
     }
+    //this.listenerMessage();
   }
 
   listenerMessage(){
     const subscription = this.mensajeriaservice.getMessageSubject().subscribe((messages: ChatMessage[])=>{
-      this.messageGeneralList = messages;
-      console.log('Messages received in component:', this.messageGeneralList);
+      if (messages && messages.length > 0) {
+        const lastMessage = messages.at(messages.length - 1);
+        if (lastMessage){
+          this.messageGeneralList.push(lastMessage); //el error aparece aquí
+          console.log('Messages received in component:', this.messageGeneralList);
+        }else {
+          console.log("No se encontro el ultimo mensaje.");
+        }
 
-        /*
-        .map((item: any)=>({
-        ...item,
-        message_side: item.sender === this.userId ? 'sender': 'receiver'
-      }))*/
+      } else {
+        console.log("No hay mensaje para enviar.");
+      }
     });
     console.log('Subscription:', subscription);
   }
