@@ -20,7 +20,7 @@ export class MensajeriaService {
   }
 
   initConnectionSocket(){
-    const url = 'http://localhost:8081/chat-socket';
+    const url = 'http://localhost:60057/chat-socket';
     this.stompClient = new Client({
       webSocketFactory: ()=> new SockJS(url),
       debug: (str) => console.log(str),
@@ -59,7 +59,8 @@ export class MensajeriaService {
           console.log('Received message:', messageContent);
 
           const currentMessages = this.messageSubject.getValue();
-          //currentMessages.push(messageContent);
+          currentMessages.push(messageContent);
+
           this.messageSubject.next(currentMessages);
         } catch (error){
           console.error('Error parsing message body:', messages.body);
